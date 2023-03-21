@@ -9,7 +9,8 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "cmd"
+            "program": "cmd",
+            "args": ["--primary postgresql://postgres:password@localhost:5441/postgres", "--mirror postgresql://postgres:password@localhost:5442/postgres"]
         }
     ]
 }

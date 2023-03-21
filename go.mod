@@ -3,6 +3,7 @@ module github.com/kellabyte/frenzy
 go 1.20
 
 require (
+	github.com/akamensky/argparse v1.4.0
 	github.com/jackc/pgx/v5 v5.3.1
 	github.com/jeroenrinzema/psql-wire v0.5.3
 	github.com/lib/pq v1.10.7
