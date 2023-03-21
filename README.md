@@ -23,7 +23,7 @@ make
 # Using
 Provide 1 primary Postgres connection string and one or many mirror Postgres connection strings.
 ```
-./bin/frenzy --listen :5432 --primary postgresql://postgres:password@mapletron:5441/postgres --mirror postgresql://postgres:password@mapletron:5442/postgres
+./bin/frenzy --listen :5432 --primary postgresql://postgres:password@localhost:5441/postgres --mirror postgresql://postgres:password@localhost:5442/postgres
 ```
 
 # Supported Queries
