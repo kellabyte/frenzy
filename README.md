@@ -20,12 +20,15 @@ To compile the `bin/frenzy` binary run the following.
 make
 ```
 
+# Using
+Provide 1 primary Postgres connection string and one or many mirror Postgres connection strings.
+```
+./bin/frenzy --listen :5432 --primary postgresql://postgres:password@mapletron:5441/postgres --mirror postgresql://postgres:password@mapletron:5442/postgres
+```
+
 # Supported Queries
 Right now I am testing with a simple hello world query.
 ```
 PGPASSWORD=password psql -U postgres -h localhost -p 5432 -c "SELECT version();"
 ```
 Surprisingly I've seen more complicated queries work already! `\l` in the `psql` console also dispatches a more complicated query that seems to work!
-
-# Current Limitations
-The current code base is extremely limited. The `primary` and `mirror` are hard coded in `cmd/main.go`.
